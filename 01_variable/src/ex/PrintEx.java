@@ -98,6 +98,11 @@ public class PrintEx {
 			System.out.println( ); // 줄바꿈
 			System.out.printf("%s/%.1f", name, num); //홍길동/1.3
 			
-			
+			String str = """
+					하이
+					안녕
+					""";
+			System.out.println();
+			System.out.println(str);
 	}
 }
