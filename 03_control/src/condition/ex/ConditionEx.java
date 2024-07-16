@@ -250,8 +250,15 @@ public void method1() {
  		
  		System.out.println();
  		
+ 		String subject = (kor < 40 ? "국어" : "" ) +" " 
+ 									+(eng < 40 ? "영어" : "" )  +" " 
+ 									+(mat < 40 ? "수학" : "" )  +" " 
+ 									+(soc < 40 ? "사회" : "" )  +" " 
+ 									+ (sci < 40 ? "과학" : "" )  +" " ;
  		if(kor<40 ||eng<40 || mat<40 || soc<40 || sci<40 )
- 		{System.out.println("FAIL[40점 미만 과목 : ]");}
+ 		{ 	
+ 			System.out.printf("FAIL[40점 미만 과목 : %s ]",subject);
+ 		}
  		else if(average < 60) { System.out.printf("FAIL [점수 : %f (평균 미달)]",average);}
  		else 	{System.out.printf("PASS [점수 : %f / 100]",average);}
 	}
