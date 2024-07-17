@@ -246,22 +246,81 @@ public void method1() {
 		int soc = sc.nextInt(); // 사
  		int sci = sc.nextInt(); // 과
  	
- 		double average = (kor+eng+mat+soc+sci)/5;
- 		
  		System.out.println();
  		
- 		String subject = (kor < 40 ? "국어" : "" ) +" " 
- 									+(eng < 40 ? "영어" : "" )  +" " 
- 									+(mat < 40 ? "수학" : "" )  +" " 
- 									+(soc < 40 ? "사회" : "" )  +" " 
- 									+ (sci < 40 ? "과학" : "" )  +" " ;
- 		if(kor<40 ||eng<40 || mat<40 || soc<40 || sci<40 )
- 		{ 	
+ 		String subject =   (kor < 40 ? "국어 " : "" ) 
+ 				+(eng < 40 ? "영어 " : "" )
+ 				+(mat < 40 ? "수학 " : "" )
+ 				+(soc < 40 ? "사회 " : "" ) 
+ 				+ (sci < 40 ? "과학 " : "" ) ;
+ 		
+ 		if(kor<40 ||eng<40 || mat<40 || soc<40 || sci<40 ){ 	
  			System.out.printf("FAIL[40점 미만 과목 : %s ]",subject);
+ 			return; // Early return; (중간에 메서드를 종료)
  		}
- 		else if(average < 60) { System.out.printf("FAIL [점수 : %f (평균 미달)]",average);}
- 		else 	{System.out.printf("PASS [점수 : %f / 100]",average);}
+ 		
+ 		double average = (kor+eng+mat+soc+sci)/5.0;
+ 		
+ 		if(average < 60) {
+ 			System.out.printf("FAIL [점수 : %.1f (평균 미달)]",average);
+ 			return;
+ 		}
+ 		System.out.printf("PASS [점수 : %.1f / 100]",average);
 	}
+	
+	
+	/** 수업 풀이 */
+	
+	// 40점 미만인 과목 검사
+	/*boolean flag = false; 
+		
+		String str = ""; // 빈칸 (자료형 : String, 내용X)
+		
+		if(kor < 40) {
+			flag = true;
+			str += "국어 ";
+		}
+		
+		if(eng < 40) {
+			flag = true;
+			str += "영어 ";
+		}
+		
+		if(mat < 40) {
+			flag = true;
+			str += "수학 ";
+		}
+		
+		if(soc < 40) {
+			flag = true;
+			str += "사회 ";
+		}
+		
+		if(sci < 40) {
+			flag = true;
+			str += "과학 ";
+	 	}
+	 	
+	 	// 40점 미만 과목이 존재하는 경우
+	 	if(flag) { // str == ""
+	 		System.out.printf("FAIL [40점 미만 과목 : %s]", str);
+	 		return;
+	 	}
+	 		
+	 		
+	 	// 평균(double형 결과를 반환 받기 위해 5.0으로 나눔)
+	 	double avg = (kor + eng + mat + soc + sci) / 5.0;
+	 		
+	 	if(avg < 60.0) {
+	 		System.out.printf("FAIL [점수 : %.1f (평균 미달)]", avg);
+	 		return; //  Early return; (중간에 메서드를 종료)
+	 	}
+	 		
+	 	System.out.printf("PASS [점수 : %.1f / 100]", avg);
+	*/
+	
+	
+	
 	
 }	
 	
