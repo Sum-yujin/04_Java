@@ -190,7 +190,7 @@ int[] arr = new int[9]; // 배열 선언, 할당
 			}
 			for(int j =0; j< arr.length/2; j++) {
 				
-				arr[i] = 
+			 
 			}
 			
 		}
