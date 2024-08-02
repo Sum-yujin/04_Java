@@ -11,14 +11,15 @@ import dto.Member;
 
 public interface MemberDao {
 
-	//  인터페이스 메서드는 묵시적으로 public abstract다!!
+	// 인터페이스 메서드는 
+	// 묵시적(암묵적)으로 public abstract다!!
 	
 	/**
-	 *  DAO 객체가 가지고 있는 memberList 반환
+	 * DAO 객체가 가지고 있는 memberList 반환
 	 * @return memberList
 	 */
-	List<Member>getMemberList();
-	
+	List<Member> getMemberList();
+
 	
 	/**
 	 * 회원 추가 
@@ -28,12 +29,13 @@ public interface MemberDao {
 	 */
 	boolean addMember(Member member) throws IOException;
 	
-
-	/**
+	
+	/** 
 	 * 파일 저장
-	 * @throws IOException
 	 */
 	void saveFile() throws IOException;
 	
 	
 }
+
+
